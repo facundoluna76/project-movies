@@ -1,0 +1,27 @@
+.movieCard {
+    list-style: none;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+.movieCard:hover {
+    opacity: 0.7;
+}
+
+.movieImage {
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 595px){
+    .movieImage {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.movieTitle {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

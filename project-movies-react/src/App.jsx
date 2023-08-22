@@ -1,19 +1,27 @@
-import { useState } from 'react'
-import { Moviesgrid } from './Moviesgrid'
-import stylesApp from "./App.module.css"
+import styles from "./App.module.css"
+import { MoviesGrid } from "./components/MoviesGrid"
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import { MovieDetails } from "./pages/MovieDetails"
+import { LandingPage } from "./pages/LandingPage"
+import { NotFound } from "./pages/NotFound"
 
-function App() {
-  const [count, setCount] = useState(0)
 
+export function App() {
   return (
-    <>
+    <Router>
       <header>
-        <h1 className={stylesApp.title}>Movies</h1>
+        <Link to="/">
+          <h1 className={styles.title}>Movies</h1>
+        </Link>
       </header>
       <main>
-          <Moviesgrid/>
+          <Routes>
+            <Route path="/movies/:movieId" element={<MovieDetails/>}/>
+            <Route path="/" element={<LandingPage/>} />
+            <Route path="/" element={<NotFound/>} />
+          </Routes>
       </main>
-    </>
+    </Router>
   )
 }
 

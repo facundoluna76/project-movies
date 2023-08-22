@@ -1,0 +1,26 @@
+.detailsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    flex-wrap: wrap;
+}
+
+.col {
+    max-width: 800px;
+    margin: 15px;
+    height: auto;
+}
+
+.movieImage {
+    border-radius: 15px;
+}
+
+.movieDetails {
+    font-size: 1.5rem;
+}
+
+.firstItem {
+    margin-top: 0;
+}
